@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:13
+    container_name: postgres_ctf
+    environment:
+      POSTGRES_USER: kaztro
+      POSTGRES_PASSWORD: kaztro123
+      POSTGRES_DB: ctf
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    
