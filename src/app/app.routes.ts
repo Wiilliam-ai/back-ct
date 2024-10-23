@@ -7,7 +7,7 @@ export class AppRoutes {
   static get routes(): Router {
     const router = Router()
     router.use('/auth', AuthRoutes.routes)
-    router.use('/Module', AuthMiddleware.verifyToken, ModuleRoutes.routes)
+    router.use('/modules', AuthMiddleware.verifyToken, ModuleRoutes.routes)
     return router
   }
 }

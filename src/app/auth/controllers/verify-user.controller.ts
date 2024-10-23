@@ -23,7 +23,7 @@ export const verifyUser = async (req: Request, res: Response) => {
       message: 'User verified successfully',
       res,
       status: HttpStatus.OK,
-      data: user,
+      data: { user },
     })
   } catch (error) {
     HandleError.execute(error, 'Error verifying user', res)
